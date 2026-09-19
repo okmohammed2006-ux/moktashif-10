@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="ar" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>مستكشف | منصة الدراسات الاجتماعية</title><meta name="description" content="منصة مستكشف التعليمية لتعلم الدراسات الاجتماعية">
+<link rel="stylesheet" href="/css/style.css"></head><body>
+<header><div class="brand">🧭 مستكشف</div><nav id="nav"><button data-view="home">الرئيسية</button><button data-view="grades">الصفوف</button><button data-view="lessons">الدروس</button><button data-view="quizzes">الاختبارات</button><button data-view="dashboard">حسابي</button><button data-view="admin" id="adminNav" class="hidden">لوحة الإدارة</button></nav><div id="authArea"><button onclick="openLogin()">دخول</button><button class="secondary" onclick="openRegister()">إنشاء حساب</button></div></header>
+<main>
+<div id="toast"></div>
+<section id="home" class="view"><div class="hero"><div><span class="pill" id="siteTagline">منصة تعليمية تفاعلية</span><h1 id="heroTitle">اتعلّم الدراسات الاجتماعية بطريقة <span>أسهل وأمتع</span></h1><p id="heroText">دروس مبسطة، اختبارات تفاعلية، متابعة للتقدم، ومحتوى منظم لكل صف.</p><button onclick="go('grades')">ابدأ التعلم الآن ←</button><a class="parentLink" href="/parent.html">👨‍👩‍👦 قسم ولي الأمر</a></div><div class="heroCard">🗺️<b>رحلتك التعليمية</b><small>درس → اختبار → نتيجة → تقدم</small></div></div><h2>اختر مرحلتك</h2><div id="homeGrades" class="cards"></div>
+<div id="homeBlocks" class="homeBlocks"></div><div class="teacherProfile" id="teacherProfile"><div class="profileImage" id="profileImageHome"><span>👤</span></div><div><span class="pill">👨‍🏫 معلم المنصة</span><h2 id="profileNameHome">محمد الفقي</h2><h3 id="profileTitleHome">مدرس ومقدم محتوى تعليمي</h3><p id="profileBioHome">تعلم الدراسات الاجتماعية بطريقة أبسط وأوضح.</p></div></div><div class="youtubeBox"><div><span class="pill">🎥 قناة محمد الفقي</span><h2>شرح إضافي وفيديوهات تعليمية</h2><p>تابع الفيديوهات التعليمية المرتبطة بالدروس، أو انتقل مباشرة إلى القناة.</p><a id="ytChannel" class="ytBtn" target="_blank" rel="noopener">فتح قناة يوتيوب ↗</a></div><div class="ytIcon">▶</div></div>
+<div class="contactBox"><div><span class="pill">📞 الدعم والتواصل</span><h2>تواصل مع إدارة المنصة</h2><p>للاستفسارات أو المساعدة في الحساب والدروس.</p></div><div id="contactLinks" class="contactLinks"></div></div></section>
+<section id="grades" class="view hidden"><h1>الصفوف الدراسية</h1><div id="allGrades" class="cards"></div></section>
+<section id="lessons" class="view hidden"><div class="titleRow"><h1>الدروس</h1><select id="lessonGrade"></select></div><div id="lessonCards" class="cards"></div></section>
+<section id="quizzes" class="view hidden"><div class="titleRow"><h1>الاختبارات</h1><select id="quizGrade"></select></div><div id="quizCards" class="cards"></div></section>
+<section id="dashboard" class="view hidden"><h1>حسابي</h1><div id="studentDash"></div></section>
+<section id="admin" class="view hidden"><iframe src="/admin.html" title="لوحة الإدارة"></iframe></section>
+</main>
+<div id="modal" class="modal hidden"><div class="modalBox"><button class="close" onclick="closeModal()">×</button><div id="modalBody"></div></div></div>
+<script src="/js/app.js"></script></body></html>
