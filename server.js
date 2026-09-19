@@ -15,7 +15,7 @@ const upload=multer({storage,limits:{fileSize:150*1024*1024},fileFilter:(req,fil
 const PORT=process.env.PORT||3000;
 const JWT_SECRET=process.env.JWT_SECRET||"";
 if(process.env.NODE_ENV==="production" && JWT_SECRET.length<32){throw new Error("JWT_SECRET must be set to a random secret of at least 32 characters in production");}
-const DB=path.join(__dirname,"data","db.json");
+const DB=path.join(__dirname,"db.json");
 const DATABASE_URL=process.env.DATABASE_URL||"";
 const pool=DATABASE_URL?new Pool({connectionString:DATABASE_URL,ssl:process.env.NODE_ENV==="production"?{rejectUnauthorized:false}:false,max:5}):null;
 let state=null;
